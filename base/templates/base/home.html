@@ -1,0 +1,18 @@
+{% extends 'main.html' %}
+{% block content %}
+<div class="container">
+    <h1>Online Library!</h1>
+    <div style="display: flex; flex-wrap: wrap;">
+        {% for book in books %}
+        <div class="card" style="width: 18rem; margin: 10px;">
+            <img src="{{ book.picture }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{ book.name }}</h5>
+                <p class="card-text">{{ book.description }}</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
